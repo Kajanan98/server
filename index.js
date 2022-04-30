@@ -13,7 +13,7 @@ const verifyAuthentication = require("./middlewares/auth.middleware");
 const app = express();
 const connectToDB = require("./db/db");
 
-connectToDB('mongodb+srv://kaja:Kajanan1234@electro.u9gv5.mongodb.net/social?retryWrites=true&w=majority');
+connectToDB(process.env.URL);
 
 app.use(cors());
 app.use(express.json());
